@@ -22,7 +22,7 @@
 
 
 (public
-	rm110 0
+	rm111 0
 )
 
 (instance gunSound of Sound
@@ -44,22 +44,18 @@
     )
     
     (method (doVerb theVerb)
-    (switch theVerb
-        (V_LOOK
-        	(gunSound play:)
-			;(Prints {FUCK! ME!})
-			(Bset F_GuyDead)
-			(AddToScore 100)
-			
-			(guy
-				setCycle: EndLoop
-			)
-        )
-        (else
-            (super doVerb: theVerb &rest)
-        )
-    )
-    
+	    (switch theVerb
+	        (V_LOOK
+	        	(gunSound play:)
+				(Bset F_GuyDead)
+				(AddToScore 100)
+				
+				(guy setCycle: EndLoop)
+	        )
+	        (else
+	            (super doVerb: theVerb &rest)
+	        )
+	    )
 	)
 )
 
@@ -72,20 +68,19 @@
     )
     
     (method (doVerb theVerb)
-    (switch theVerb
-        (V_LOOK
-        	(gunSound play:)
-        	(hobo 
-        		view: 114
-        		setCycle: EndLoop
-        	)	
-			(AddToScore 100)
-        )
-        (else
-            (super doVerb: theVerb &rest)
-        )
-    )
-    
+	    (switch theVerb
+	        (V_LOOK
+	        	(gunSound play:)
+	        	(hobo 
+	        		view: 114
+	        		setCycle: EndLoop
+	        	)	
+				(AddToScore 100)
+	        )
+	        (else
+	            (super doVerb: theVerb &rest)
+	        )
+	    )
 	)
 )
 
@@ -160,7 +155,7 @@
 	)
 )
 
-(instance rm110 of Room
+(instance rm111 of Room
 	(properties
 		picture 011
 		style (| dpANIMATION_BLACKOUT dpOPEN_FADEPALETTE)
@@ -299,7 +294,6 @@
 
     (method (doit)
         (super doit:)
-
     )
     
    	(method (changeState newState)

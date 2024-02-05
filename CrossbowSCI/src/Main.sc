@@ -506,7 +506,7 @@
 
 (instance music1 of Sound
 	(properties
-		number 2 
+		number 112 ;larry theme
 		priority 1
 		flags $0001
 	)

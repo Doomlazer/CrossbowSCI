@@ -228,12 +228,12 @@
 		
 		(switch gPreviousRoomNumber
 			; Add room numbers here to set up the ego when coming from different directions.
-			(else 
-				(SetUpEgo -1 1)
-				(gEgo posn: 150 130)
-			)
+;;;			(else 
+;;;				(SetUpEgo -1 1)
+;;;				(gEgo posn: 150 130)
+;;;			)
 		)
-		(gEgo init:)
+;;;		(gEgo init:)
 		; We just came from the title screen, so we need to call this to give control
 		; to the player.
 		(guy init:)
@@ -281,7 +281,7 @@
 			init:
 			
 		)
-		(gEgo hide: true)
+		;(gEgo hide: true)
 		(gGame handsOn:)
 	)
 	
@@ -364,7 +364,7 @@
 					(Btest F_marieClear)
 				)
 			)
-			(gRoom newRoom: 111)
+			(gRoom newRoom: 112)
 		)
     )
 )
